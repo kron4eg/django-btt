@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-31 18:13+0300\n"
+"POT-Creation-Date: 2008-08-31 23:54+0300\n"
 "PO-Revision-Date: 2008-08-31 18:16+0300\n"
 "Last-Translator: Artiom Diomin <kron82@gmail.com>\n"
 "Language-Team: RUSSIAN <RU@li.org>\n"
@@ -22,10 +22,6 @@ msgstr "Русский"
 #: settings.py:29
 msgid "Romanian"
 msgstr "Румынский"
-
-#: settings.py:30
-msgid "English"
-msgstr "Английский"
 
 #: apps/blog/admin.py:13
 msgid "Title"
@@ -43,7 +39,7 @@ msgstr "Опции"
 msgid "Date"
 msgstr "Дата"
 
-#: apps/blog/models.py:14
+#: apps/blog/models.py:14 apps/torrent/models.py:11 apps/torrent/models.py:27
 msgid "title"
 msgstr "заголовок"
 
@@ -67,7 +63,7 @@ msgstr "дата обновления"
 msgid "published"
 msgstr "опубликовано"
 
-#: apps/blog/models.py:21
+#: apps/blog/models.py:21 apps/torrent/models.py:33
 msgid "tags"
 msgstr "метки"
 
@@ -78,6 +74,74 @@ msgstr "пост"
 #: apps/blog/models.py:28
 msgid "blog posts"
 msgstr "посты"
+
+#: apps/torrent/models.py:12
+msgid "slug"
+msgstr ""
+
+#: apps/torrent/models.py:13 apps/torrent/models.py:28
+msgid "image"
+msgstr ""
+
+#: apps/torrent/models.py:20
+msgid "category"
+msgstr ""
+
+#: apps/torrent/models.py:21
+msgid "categories"
+msgstr ""
+
+#: apps/torrent/models.py:29
+msgid "info hash"
+msgstr ""
+
+#: apps/torrent/models.py:32
+msgid "comments enabled"
+msgstr ""
+
+#: apps/torrent/models.py:39 apps/tracker/models.py:9
+msgid "torrent"
+msgstr "Торрент"
+
+#: apps/torrent/models.py:40
+msgid "torrents"
+msgstr "Торренты"
+
+#: apps/tracker/models.py:10
+msgid "peer ID"
+msgstr ""
+
+#: apps/tracker/models.py:11
+msgid "post"
+msgstr "пост"
+
+#: apps/tracker/models.py:12
+msgid "key"
+msgstr "ключь"
+
+#: apps/tracker/models.py:13
+msgid "uploaded"
+msgstr "загружено"
+
+#: apps/tracker/models.py:14
+msgid "downloaded"
+msgstr "скачано"
+
+#: apps/tracker/models.py:15
+msgid "corrupt"
+msgstr "побитых"
+
+#: apps/tracker/models.py:16
+msgid "left"
+msgstr "осталось"
+
+#: apps/tracker/models.py:22
+msgid "peer id"
+msgstr "PeerID"
+
+#: apps/tracker/models.py:23
+msgid "peer ids"
+msgstr "PeerIDs"
 
 #: templates/base.html:19
 msgid "Home"
@@ -90,4 +154,3 @@ msgstr "Торренты"
 #: templates/base.html:30
 msgid "Recent Updates"
 msgstr "Новости"
-

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-31 18:13+0300\n"
+"POT-Creation-Date: 2008-08-31 23:54+0300\n"
 "PO-Revision-Date: 2008-08-31 18:20+0300\n"
 "Last-Translator: Artiom Diomin <kron82@gmail.com>\n"
 "Language-Team: ROMANIAN <RO@li.org>\n"
@@ -21,10 +21,6 @@ msgstr ""
 
 #: settings.py:29
 msgid "Romanian"
-msgstr ""
-
-#: settings.py:30
-msgid "English"
 msgstr ""
 
 #: apps/blog/admin.py:13
@@ -43,7 +39,7 @@ msgstr ""
 msgid "Date"
 msgstr ""
 
-#: apps/blog/models.py:14
+#: apps/blog/models.py:14 apps/torrent/models.py:11 apps/torrent/models.py:27
 msgid "title"
 msgstr ""
 
@@ -67,7 +63,7 @@ msgstr ""
 msgid "published"
 msgstr ""
 
-#: apps/blog/models.py:21
+#: apps/blog/models.py:21 apps/torrent/models.py:33
 msgid "tags"
 msgstr ""
 
@@ -77,6 +73,74 @@ msgstr ""
 
 #: apps/blog/models.py:28
 msgid "blog posts"
+msgstr ""
+
+#: apps/torrent/models.py:12
+msgid "slug"
+msgstr ""
+
+#: apps/torrent/models.py:13 apps/torrent/models.py:28
+msgid "image"
+msgstr ""
+
+#: apps/torrent/models.py:20
+msgid "category"
+msgstr ""
+
+#: apps/torrent/models.py:21
+msgid "categories"
+msgstr ""
+
+#: apps/torrent/models.py:29
+msgid "info hash"
+msgstr ""
+
+#: apps/torrent/models.py:32
+msgid "comments enabled"
+msgstr ""
+
+#: apps/torrent/models.py:39 apps/tracker/models.py:9
+msgid "torrent"
+msgstr "Torrent"
+
+#: apps/torrent/models.py:40
+msgid "torrents"
+msgstr "Torrente"
+
+#: apps/tracker/models.py:10
+msgid "peer ID"
+msgstr ""
+
+#: apps/tracker/models.py:11
+msgid "post"
+msgstr ""
+
+#: apps/tracker/models.py:12
+msgid "key"
+msgstr ""
+
+#: apps/tracker/models.py:13
+msgid "uploaded"
+msgstr ""
+
+#: apps/tracker/models.py:14
+msgid "downloaded"
+msgstr ""
+
+#: apps/tracker/models.py:15
+msgid "corrupt"
+msgstr ""
+
+#: apps/tracker/models.py:16
+msgid "left"
+msgstr ""
+
+#: apps/tracker/models.py:22
+msgid "peer id"
+msgstr ""
+
+#: apps/tracker/models.py:23
+msgid "peer ids"
 msgstr ""
 
 #: templates/base.html:19
@@ -90,4 +154,3 @@ msgstr "Torrente"
 #: templates/base.html:30
 msgid "Recent Updates"
 msgstr "Noutaţi"
-
