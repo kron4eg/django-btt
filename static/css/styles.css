@@ -1,0 +1,113 @@
+/** BASIC */
+
+body {
+    text-align: justify;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #333333;
+}
+
+h1, h2, h3 {
+    text-transform: lowercase;
+    color: #000099;
+}
+
+ul {
+    margin-left: 0px;
+    padding-left: 1em;
+    list-style-position: inside;
+}
+
+a {
+    color: #000099;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #990000;
+}
+
+/** HEADER */
+
+#header {
+    width: 700px;
+    height: 60px;
+    margin: 0px auto;
+}
+
+#header h1 {
+    float: left;
+    margin: 0px;
+    padding: 20px 0px 0px 0px;
+}
+
+#header h2 {
+    float: right;
+    margin: 0px;
+    padding: 27px 0px 0px 0px;
+}
+
+/** MENU */
+
+#menu {
+    height: 1.5em;
+    margin: 0px 20px;
+    border: 1px solid #000099;
+}
+
+#menu ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+#menu li {
+    display: inline;
+}
+
+#menu a {
+    display: block;
+    float: left;
+    padding: 3px 10px;
+    border-right: 1px solid #000099;
+    text-decoration: none;
+}
+
+#menu a:hover {
+    background: #000099;
+    color: #FFFFFF;
+}
+
+/** CONTENT */
+
+#content {
+    margin: 0px 20px;
+}
+
+#content h2 {
+    font-weight: normal;
+}
+
+#left {
+    float: left;
+    width: 75%;
+}
+
+#right {
+    float: right;
+    width: 20%;
+}
+
+/** FOOTER */
+
+#footer {
+    clear: both;
+    margin: 0px 20px;
+    padding: 5px 10px;
+    border: 1px solid #000099;
+}
+
+#footer p {
+    margin: 0px;
+    padding: 0px;
+    font-size: x-small;
+}

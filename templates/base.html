@@ -1,14 +1,43 @@
+{% load i18n %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{{ LANGUAGE_CODE }}" lang="{{ LANGUAGE_CODE }}">
-<head>
-  <title>{% block title %}{% endblock %}</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="keywords" content="{% block keywords %}{% endblock %}" />
-  <meta name="description" content="{% block description %}{% endblock %}" />
-  {% block extra_css %}{% endblock %}
-  {% block extra_js %}{% endblock %}
-</head>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="keywords" content="{% block keywords %}{% endblock %}" />
+    <meta name="description" content="{% block description %}{% endblock %}" />
+    <link href="{{ MEDIA_URL }}css/styles.css" rel="stylesheet" type="text/css" />
+    {% block extra_css %}{% endblock %}
+    {% block extra_js %}{% endblock %}
+  </head>
 <body>
-    {% block content %}{% endblock %}
+<div id="header">
+    <h1>BTT</h1>
+</div>
+<div id="menu">
+    <ul>
+        <li><a href="/">{% trans "Home" %}</a></li>
+        <li><a href="/torrents/">{% trans "Torrents" %}</a></li>
+
+    </ul>
+</div>
+<div id="content">
+    <div id="left">
+        {% block content %}{% endblock %}
+    </div>
+    <div id="right">
+        <h2>Recent Updates</h2>
+        {% block right %}{% endblock %}
+        <!--
+        <p>
+            <strong>[06/09/2006]</strong> 
+            Etiam odio mi, suscipit et, rhoncus ac, lacinia, nisl. Aliquam gravida massa eu arcu. <a href="#">More&#8230;</a>
+        </p>
+        -->
+    </div>
+</div>
+<div id="footer">
+    <p>Copyright &copy; 2006 Sitename.com. Designed by <a href="http://www.freecsstemplates.org" class="link1">Free CSS Templates</a></p>
+</div>
 </body>
 </html>
