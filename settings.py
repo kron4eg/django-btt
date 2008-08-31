@@ -22,12 +22,11 @@ DATABASE_PORT = ''
 
 TIME_ZONE = 'Europe/Chisinau'
 
-LANGUAGE_CODE = 'en'
+LANGUAGE_CODE = 'ru'
 from django.utils.translation import ugettext_lazy as _
 LANGUAGES = (
     ('ru', _('Russian')),
     ('ro', _('Romanian')),
-    ('en', _('English')),
 )
 USE_I18N = True
 
@@ -76,6 +75,8 @@ INSTALLED_APPS = (
     'django.contrib.sitemaps',
     'django.contrib.admin',
     'blog',
+    'torrent',
+    'tracker',
     'tagging',
 )
 
