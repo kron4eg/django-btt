@@ -1,4 +1,4 @@
-{% load i18n %}
+{% load i18n blogtags %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{{ LANGUAGE_CODE }}" lang="{{ LANGUAGE_CODE }}">
   <head>
@@ -12,32 +12,28 @@
   </head>
 <body>
 <div id="header">
-    <h1>BTT</h1>
+  <h1>BTT</h1>
 </div>
 <div id="menu">
-    <ul>
-        <li><a href="/">{% trans "Home" %}</a></li>
-        <li><a href="/torrents/">{% trans "Torrents" %}</a></li>
-
-    </ul>
+  <ul>
+    <li><a href="/">{% trans "Home" %}</a></li>
+    <li><a href="/torrents/">{% trans "Torrents" %}</a></li>
+  </ul>
 </div>
 <div id="content">
-    <div id="left">
-        {% block content %}{% endblock %}
-    </div>
-    <div id="right">
-        <h2>Recent Updates</h2>
-        {% block right %}{% endblock %}
-        <!--
-        <p>
-            <strong>[06/09/2006]</strong> 
-            Etiam odio mi, suscipit et, rhoncus ac, lacinia, nisl. Aliquam gravida massa eu arcu. <a href="#">More&#8230;</a>
-        </p>
-        -->
-    </div>
+  <div id="left">
+    {% block content %}{% endblock %}
+  </div>
+  <div id="right">
+    {% include "lang.html" %}
+    {% block right_menu %}
+      <h2>{% trans "Recent Updates" %}</h2>
+      {% blog_short_list %}
+    {% endblock %}
+  </div>
 </div>
 <div id="footer">
-    <p>Copyright &copy; 2006 Sitename.com. Designed by <a href="http://www.freecsstemplates.org" class="link1">Free CSS Templates</a></p>
+  <p>Designed by <a href="http://www.freecsstemplates.org" class="link1">Free CSS Templates</a></p>
 </div>
 </body>
 </html>

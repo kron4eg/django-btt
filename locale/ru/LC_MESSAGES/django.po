@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-08-31 17:22+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: settings.py:28
+msgid "Russian"
+msgstr ""
+
+#: settings.py:29
+msgid "English"
+msgstr ""
+
+#: apps/blog/admin.py:13
+msgid "Title"
+msgstr ""
+
+#: apps/blog/admin.py:14
+msgid "Text"
+msgstr ""
+
+#: apps/blog/admin.py:15
+msgid "Date"
+msgstr ""
+
+#: apps/blog/models.py:13
+msgid "title"
+msgstr ""
+
+#: apps/blog/models.py:14
+msgid "slug"
+msgstr ""
+
+#: apps/blog/models.py:15
+msgid "text"
+msgstr ""
+
+#: apps/blog/models.py:17
+msgid "publication date"
+msgstr ""
+
+#: apps/blog/models.py:18
+msgid "update date"
+msgstr ""
+
+#: apps/blog/models.py:19
+msgid "published"
+msgstr ""
+
+#: apps/blog/models.py:20
+msgid "tags"
+msgstr ""
+
+#: apps/blog/models.py:26
+msgid "blog post"
+msgstr ""
+
+#: apps/blog/models.py:27
+msgid "blog posts"
+msgstr ""
+
+#: templates/base.html:19
+msgid "Home"
+msgstr ""
+
+#: templates/base.html:20
+msgid "Torrents"
+msgstr ""
+
+#: templates/base.html:29
+msgid "Recent Updates"
+msgstr ""

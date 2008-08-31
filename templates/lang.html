@@ -1,0 +1,7 @@
+<form action="{% url django.views.i18n.set_language %}" method="post">
+<input name="next" type="hidden" value="{{ request.path_info }}" />
+<select name="language">{% for lang in LANGUAGES %}
+    <option value="{{ lang.0 }}"{% ifequal lang.0 LANGUAGE_CODE %} selected="selected"{% endifequal %}>{{ lang.1 }}</option>{% endfor %}
+</select>
+<input type="submit" value="Go" />
+</form>

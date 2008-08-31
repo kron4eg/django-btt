@@ -96,6 +96,15 @@ a:hover {
     float: right;
     width: 20%;
 }
+    #right h3 {
+        margin: 5px 0;
+        text-transform: none;
+    }
+    #right p.date {
+        color: #ccc;
+        font-size: x-small;
+        margin: 0px;
+    }
 
 /** FOOTER */
 

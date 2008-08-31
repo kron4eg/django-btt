@@ -26,6 +26,7 @@ LANGUAGE_CODE = 'en'
 from django.utils.translation import ugettext_lazy as _
 LANGUAGES = (
     ('ru', _('Russian')),
+    ('ro', _('Romanian')),
     ('en', _('English')),
 )
 USE_I18N = True
@@ -75,6 +76,7 @@ INSTALLED_APPS = (
     'django.contrib.sitemaps',
     'django.contrib.admin',
     'blog',
+    'tagging',
 )
 
 ######### Custom settings #########
