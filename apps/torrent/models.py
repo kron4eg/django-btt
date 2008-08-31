@@ -26,6 +26,8 @@ class Torrent(models.Model):
     category = models.ForeignKey(Category)
     title = models.CharField(_('title'), max_length=80)
     image = models.ImageField(_('image'), upload_to='t')
+    text = models.TextField(_('text'))
+    html = models.TextField(editable=False, blank=True)
     info_hash = models.CharField(_('info hash'), max_length=40, db_index=True)
     pub_date = models.DateTimeField(auto_now_add=True, editable=False)
     comment_count = models.PositiveIntegerField(editable=False)
@@ -38,3 +40,9 @@ class Torrent(models.Model):
     class Meta:
         verbose_name =_('torrent')
         verbose_name_plural =_('torrents')
+
+    def save(self, force_insert=False, force_update=False):
+        from markdown import Markdown
+        md = Markdown(extensions=['footnotes'], safe_mode=True)
+        self.html = md.convert(self.text)
+        super(Torrent, self).save(force_insert, force_update)
