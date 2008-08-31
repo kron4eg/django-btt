@@ -8,86 +8,86 @@ msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-08-31 18:13+0300\n"
-"PO-Revision-Date: 2008-08-31 18:16+0300\n"
+"PO-Revision-Date: 2008-08-31 18:20+0300\n"
 "Last-Translator: Artiom Diomin <kron82@gmail.com>\n"
-"Language-Team: RUSSIAN <RU@li.org>\n"
+"Language-Team: ROMANIAN <RO@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: settings.py:28
 msgid "Russian"
-msgstr "Русский"
+msgstr ""
 
 #: settings.py:29
 msgid "Romanian"
-msgstr "Румынский"
+msgstr ""
 
 #: settings.py:30
 msgid "English"
-msgstr "Английский"
+msgstr ""
 
 #: apps/blog/admin.py:13
 msgid "Title"
-msgstr "Заголовок"
+msgstr ""
 
 #: apps/blog/admin.py:14
 msgid "Text"
-msgstr "Текст"
+msgstr ""
 
 #: apps/blog/admin.py:15
 msgid "Options"
-msgstr "Опции"
+msgstr ""
 
 #: apps/blog/admin.py:16
 msgid "Date"
-msgstr "Дата"
+msgstr ""
 
 #: apps/blog/models.py:14
 msgid "title"
-msgstr "заголовок"
+msgstr ""
 
 #: apps/blog/models.py:15
 msgid "text"
-msgstr "текст"
+msgstr ""
 
 #: apps/blog/models.py:16
 msgid "language"
-msgstr "язык"
+msgstr "limba"
 
 #: apps/blog/models.py:18
 msgid "publication date"
-msgstr "дата публикации"
+msgstr ""
 
 #: apps/blog/models.py:19
 msgid "update date"
-msgstr "дата обновления"
+msgstr ""
 
 #: apps/blog/models.py:20
 msgid "published"
-msgstr "опубликовано"
+msgstr ""
 
 #: apps/blog/models.py:21
 msgid "tags"
-msgstr "метки"
+msgstr ""
 
 #: apps/blog/models.py:27
 msgid "blog post"
-msgstr "пост"
+msgstr ""
 
 #: apps/blog/models.py:28
 msgid "blog posts"
-msgstr "посты"
+msgstr ""
 
 #: templates/base.html:19
 msgid "Home"
-msgstr "Начало"
+msgstr ""
 
 #: templates/base.html:20
 msgid "Torrents"
-msgstr "Торренты"
+msgstr "Torrente"
 
 #: templates/base.html:30
 msgid "Recent Updates"
-msgstr "Новости"
+msgstr "Noutaţi"
 
