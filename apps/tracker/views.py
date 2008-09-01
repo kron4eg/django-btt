@@ -45,7 +45,7 @@ def announce(request):
             peer.save()
     elif 'stopped' in event:
         try:
-            peer = Peer.objects.get(peer_id=peer_id, port=port, ip=ip, torrent=torrent)
+            peer = Peer.objects.get(peer_id=peer_id, ip=ip, torrent=torrent)
             peer.delete()
         except Peer.DoesNotExist:
             pass
