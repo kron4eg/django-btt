@@ -85,6 +85,8 @@ INSTALLED_APPS = (
 # Items per page
 PER_PAGE = 50
 
+ANNOUNCE_INTERVAL = 300
+
 try:
     from settings_local import *
 except ImportError:
