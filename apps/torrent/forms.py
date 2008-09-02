@@ -7,12 +7,38 @@ from django import forms
 from django.utils.translation import ugettext_lazy as _
 
 from lib.bt.bencoding import encode, decode, InvalidDataError
-from torrent.models import Torrent
+from torrent.models import Category, Torrent
+
+
+class CategoryChoice(forms.ModelChoiceField):
+    def __init__(self, *args, **kwargs):
+        self.begin_from_level = kwargs.pop('begin_from_level', 0)
+        super(CategoryChoice, self).__init__(*args, **kwargs)
+
+    def label_from_instance(self, obj):
+        return obj.tree_represent(space='-', begin_from_level=self.begin_from_level)
+
+
+class CategoryForm(forms.ModelForm):
+    parent = CategoryChoice(queryset=Category.objects.all(), required=False)
+
+    def __init__(self, *args, **kwargs):
+        super(CategoryForm, self).__init__(*args, **kwargs)
+        self.fields['parent'].queryset = Category.objects.filter(level__in=[0,1])
+
+    
+    class Meta:
+        model = Category
 
 
 class TorrentForm(forms.ModelForm):
-    
+    category = CategoryChoice(queryset=Category.objects.all(), empty_label=None, begin_from_level=1)
     torrent = forms.FileField()
+
+    def __init__(self, *args, **kwargs):
+        super(TorrentForm, self).__init__(*args, **kwargs)
+        self.fields['category'].queryset = Category.objects.exclude(level=0)
+
 
     class Meta:
         model = Torrent

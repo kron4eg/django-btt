@@ -75,10 +75,18 @@ INSTALLED_APPS = (
     'django.contrib.sitemaps',
     'django.contrib.admin',
     'blog',
+    'mptt',
     'torrent',
     'tracker',
     'tagging',
 )
+
+try:
+    import django_extensions
+    INSTALLED_APPS += ('django_extensions',)
+except ImportError:
+    pass
+
 
 ######### Custom settings #########
 
