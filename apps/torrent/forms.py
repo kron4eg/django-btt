@@ -7,6 +7,8 @@ from django import forms
 from django.utils.translation import ugettext_lazy as _
 
 from lib.bt.bencoding import encode, decode, InvalidDataError
+from sorl.thumbnail.main import DjangoThumbnail
+from torrent.fields import AdminImageWidget
 from torrent.models import Category, Torrent
 
 
@@ -25,7 +27,6 @@ class CategoryForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super(CategoryForm, self).__init__(*args, **kwargs)
         self.fields['parent'].queryset = Category.objects.filter(level__in=[0,1])
-
     
     class Meta:
         model = Category
@@ -34,11 +35,11 @@ class CategoryForm(forms.ModelForm):
 class TorrentForm(forms.ModelForm):
     category = CategoryChoice(queryset=Category.objects.all(), empty_label=None, begin_from_level=1)
     torrent = forms.FileField()
+    image = forms.FileField(widget=AdminImageWidget, label=_('image'), required=False)
 
     def __init__(self, *args, **kwargs):
         super(TorrentForm, self).__init__(*args, **kwargs)
         self.fields['category'].queryset = Category.objects.exclude(level=0)
-
 
     class Meta:
         model = Torrent

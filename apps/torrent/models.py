@@ -12,9 +12,9 @@ from tagging.fields import TagField
 
 
 class Category(models.Model):
-    parent = models.ForeignKey('self', null=True, blank=True, related_name='children')
-    title = models.CharField(_('title'), max_length=80)
-    image = models.ImageField(_('image'), upload_to='img/category', blank=True, null=True)
+    parent = models.ForeignKey('self', null=True, blank=True, related_name='children', verbose_name=_('Parent'))
+    title = models.CharField(_('Title'), max_length=80)
+    image = models.ImageField(_('Image'), upload_to='img/category', blank=True, null=True)
     count = models.PositiveIntegerField(editable=False, default=0)
     
     def __unicode__(self):
@@ -34,14 +34,18 @@ mptt.register(Category,order_insertion_by=['title'])
 
 class Torrent(models.Model):
     category = models.ForeignKey(Category)
-    title = models.CharField(_('title'), max_length=80)
-    author = models.ForeignKey('auth.user', blank=True, null=True)
-    image = models.ImageField(_('image'), upload_to='t')
-    text = models.TextField(_('text'))
+    title = models.CharField(_('Title'), max_length=80)
+    author = models.ForeignKey('auth.user', blank=True, null=True, verbose_name=_('Author'))
+    image = models.ImageField(_('Image'), upload_to='img/torrents', blank=True, null=True)
+    text = models.TextField(_('Text'))
     html = models.TextField(editable=False, blank=True)
 
     torrent = models.TextField(editable=False)
-    info_hash = models.CharField(_('info hash'), max_length=40, db_index=True, editable=False)
+    info_hash = models.CharField(_('Info hash'), max_length=40, db_index=True, editable=False)
+    files = models.PositiveIntegerField(editable=False)
+    size = models.PositiveIntegerField(editable=False)
+    seeders = models.PositiveIntegerField(editable=False, default=0)
+    leechers = models.PositiveIntegerField(editable=False, default=0)
     pub_date = models.DateTimeField(auto_now_add=True, editable=False)
     comment_count = models.PositiveIntegerField(editable=False, default=0)
     comments_enabled = models.BooleanField(_('comments enabled'), default=True)
