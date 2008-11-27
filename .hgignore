@@ -1,5 +1,0 @@
-syntax: regexp
-\.py[co]$
-\..*\.swp$
-settings_local\.py[co]*
-\.sqlite
