@@ -1,4 +1,4 @@
-from bt import bencoding
+from bencoding import bencoding
 from decorators import render_to
 from slug import slugit
 
