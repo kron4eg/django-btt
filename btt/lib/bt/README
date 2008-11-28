@@ -1,0 +1,7 @@
+Bencoding Implementation
+
+This is a simple implementation of Bencoding, data-description format, used by
+Torrent. This implementation is aimed to be clear and good structured (in order
+to be easy understanable), not the most efficient one, keep that in mind. 
+
+http://pcr.cc/blog/entry/bencoding-implementation
