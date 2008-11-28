@@ -1,7 +1,24 @@
 Bencoding Implementation
+========================
 
 This is a simple implementation of Bencoding, data-description format, used by
 Torrent. This implementation is aimed to be clear and good structured (in order
 to be easy understanable), not the most efficient one, keep that in mind. 
 
-http://pcr.cc/blog/entry/bencoding-implementation
+Usage:
+
+    >>> data = [1, 2, 3, {'key1': 'value1', 'key2': 'value2'}, 'just a string here']
+
+    >>> encoded = encode(data)
+    >>> encoded
+    'li1ei2ei3ed4:key16:value14:key26:value2e18:just a string heree'
+
+    >>> decoded = decode(encoded)
+    >>> decoded
+    [1, 2, 3, {'key2': 'value2', 'key1': 'value2'}, 'just a string here']
+
+    >>> data == decoded
+    True
+
+
+WWW: http://pcr.cc/blog/entry/bencoding-implementation
