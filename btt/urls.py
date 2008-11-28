@@ -2,6 +2,6 @@
 
 from django.conf.urls.defaults import *
 
-urlpatterns = patterns('tracker.views',
+urlpatterns = patterns('btt.tracker.views',
     url(r'^$', 'announce', name='announce'),
 )
