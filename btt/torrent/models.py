@@ -7,8 +7,7 @@ from django.utils.encoding import smart_unicode
 from django.utils.translation import ugettext_lazy as _
 
 import mptt
-from lib.bt.bencoding import encode, decode
-from tagging.fields import TagField
+from btt.lib.bt.bencoding import encode, decode
 
 
 class Category(models.Model):
@@ -49,7 +48,6 @@ class Torrent(models.Model):
     pub_date = models.DateTimeField(auto_now_add=True, editable=False)
     comment_count = models.PositiveIntegerField(editable=False, default=0)
     comments_enabled = models.BooleanField(_('comments enabled'), default=True)
-    tags = TagField(_('tags'))
     
     def __unicode__(self):
         return smart_unicode(self.title)
