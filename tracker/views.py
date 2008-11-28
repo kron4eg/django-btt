@@ -11,7 +11,7 @@ from lib.bt.bencoding import encode, decode
 from torrent.models import Torrent
 from tracker.models import Peer
 
-@render_to('base.html')
+@render_to('btt/base.html')
 def announce(request):
     qs = dict(parse_qsl(request.META['QUERY_STRING']))
     if qs.get('info_hash') is None:

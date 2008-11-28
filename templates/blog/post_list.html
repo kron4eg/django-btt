@@ -1,6 +1,0 @@
-{% load i18n %}
-{% for post in post_list %}
-<h3>{{ post.title }}</h3>
-<p class="date"><strong>[{{ post.pub_date|date:"d/F/Y" }}]</strong></p> 
-{{ post.html|safe|truncatewords_html:20 }}
-{% endfor %}
